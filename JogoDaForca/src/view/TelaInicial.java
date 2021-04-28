@@ -10,6 +10,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+/**
+ * Classe que cria a tela inicial como um painel.
+ * @author Israel
+ * @version 3.0 (Abr 2021)
+ */
 public class TelaInicial {
 	private JPanel telaInicial = new JPanel();
 	private JButton iniciar = new JButton("Iniciar");
