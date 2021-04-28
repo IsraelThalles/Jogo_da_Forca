@@ -33,7 +33,7 @@ public class TelaPrincipal {
 	private JPanel painelPalavra = new JPanel();
 	private JLabel palavraEscolhida = new JLabel();
 	
-	//Misterosamente tive que criar novos botĩes para receber os botões da classe Teclado, caso contrário eles não funcionavam.
+	//Misterosamente tive que criar novos botões para receber os botões da classe Teclado, caso contrário eles não funcionavam.
 	private JButton a=teclado.getA();
 	private JButton b=teclado.getB();
 	private JButton c=teclado.getC();
