@@ -11,6 +11,11 @@ import javax.swing.JPanel;
 import controle.Operacoes;
 import java.awt.BorderLayout;
 
+/**
+ * Classe que cria uma janela e faz o tratamento de eventos para os botões.
+ * @author Israel
+ * @version 3.0 (Abr 2021)
+ */
 public class Janela extends JFrame implements ActionListener{
 	private JPanel tela = new JPanel();
 	private CardLayout cards =  new CardLayout();
@@ -20,6 +25,9 @@ public class Janela extends JFrame implements ActionListener{
 	private static TelaPrincipal telaPrincipal = new TelaPrincipal();
 	private Operacoes op = new Operacoes();
 
+	/**
+	 * Construtor da Janela. Cria a janela a adiciona as telas como painéis.
+	 */
 	public Janela() {
 		setSize(1200, 700);
 		setTitle("Jogo da Forca");
@@ -40,6 +48,11 @@ public class Janela extends JFrame implements ActionListener{
 		setVisible(true);
 		
 	}
+	
+	/**
+	 * Método que inicia o jogo e adiciona ouvintes para os botões.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Janela janela = new Janela();
 
@@ -86,6 +99,9 @@ public class Janela extends JFrame implements ActionListener{
 
 	}
 
+	/**
+	 * Método que trata os eventos de botões.
+	 */
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		Object src = event.getSource();
