@@ -11,6 +11,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+/**
+ * Classe que cria a tela principal do jogo como um painel. Essa é a tela na qual o usuário deverá interagir 
+ * para descobrir a palavra.
+ * @author Israel
+ * @version 3.0 (Abr 2021)
+ */
 public class TelaPrincipal {	
 	private JPanel telaPrincipal = new JPanel();
 	private JButton voltar = new JButton("Voltar");
@@ -23,7 +29,11 @@ public class TelaPrincipal {
 	private ImageIcon enforcando = new ImageIcon(TelaPrincipal.class.getResource("/imagens/Enforcando.gif"));
 	private ImageIcon comemorando = new ImageIcon(TelaPrincipal.class.getResource("/imagens/Comemorando.gif"));
 	private Teclado teclado = new Teclado();
+	private JLabel imagemDeFundo = new JLabel();
+	private JPanel painelPalavra = new JPanel();
+	private JLabel palavraEscolhida = new JLabel();
 	
+	//Misterosamente tive que criar novos botĩes para receber os botões da classe Teclado, caso contrário eles não funcionavam.
 	private JButton a=teclado.getA();
 	private JButton b=teclado.getB();
 	private JButton c=teclado.getC();
@@ -50,9 +60,6 @@ public class TelaPrincipal {
 	private JButton x=teclado.getX();
 	private JButton y=teclado.getY();
 	private JButton z=teclado.getZ();
-	private JLabel imagemDeFundo = new JLabel();
-	private JPanel painelPalavra = new JPanel();
-	private JLabel palavraEscolhida = new JLabel();
 
 	public TelaPrincipal() {
 		voltar.setBounds(20, 20, 80, 57);
@@ -93,8 +100,11 @@ public class TelaPrincipal {
 
 	}
 
+	/**
+	 * Método que atualiza a imagem da forca mostrada no JLabel de acordo com o número de erros.
+	 * @param numErros
+	 */
 	public void setForca(int numErros) {
-		
 		switch(numErros) {
 		
 		case 0:
@@ -125,11 +135,13 @@ public class TelaPrincipal {
 			forca.setIcon(comemorando);
 
 			break;
-
-		}
-		
+		}		
 	}
 	
+	/**
+	 * Método que atualiza a palavra no JLabel a medida que as letras forem descobertas.
+	 * @param palavraEscolhida
+	 */
 	public void setPalavraEscolhida(String palavraEscolhida) {
 		this.palavraEscolhida.setText(palavraEscolhida);
 	}
@@ -246,6 +258,11 @@ public class TelaPrincipal {
 		return z;
 	}
 	
+	/**
+	 * Método que desabilita todos os botões do teclado se a partida terminou ou habilita todos os botões do teclado 
+	 * ao sair da tela principal do jogo.
+	 * @param variavel
+	 */
 	public void reabilitarBotoes(Boolean variavel) {
 		a.setEnabled(variavel);
 		b.setEnabled(variavel);
