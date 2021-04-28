@@ -10,6 +10,11 @@ import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Cursor;
 
+/**
+ * Classe que cria a tela de seleção de subtemas como um painel.
+ * @author Israel
+ * @version 3.0 (Abr 2021)
+ */
 public class TelaSubtemas {
 	private JPanel telaSubtemas = new JPanel();
 	private JButton botao1 = new JButton();
@@ -72,6 +77,10 @@ public class TelaSubtemas {
 		return botao1;
 	}
 
+	/**
+	 * Muda o texto do botão a cada vez que escolhe um tema.
+	 * @param botao1 (String com o novo texto do botão.)
+	 */
 	public void setBotao1(String botao1) {
 		this.botao1.setText(botao1);
 	}
@@ -80,6 +89,10 @@ public class TelaSubtemas {
 		return botao2;
 	}
 
+	/**
+	 * Muda o texto do botão a cada vez que escolhe um tema.
+	 * @param botao2 (String com o novo texto do botão.)
+	 */
 	public void setBotao2(String botao2) {
 		this.botao2.setText(botao2);
 	}
@@ -91,5 +104,4 @@ public class TelaSubtemas {
 	public JPanel getTelaSubtemas() {
 		return telaSubtemas;
 	}
-
 }
