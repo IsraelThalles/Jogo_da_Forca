@@ -5,6 +5,11 @@ import java.util.Random;
 import modelo.ListaDePalavras;
 import modelo.ModeloDeListaDePalavras;
 
+/**
+ * Classe que realiza todas as operações sobre a palavra a ser descoberta pelo usuàrio.
+ * @author Israel
+ * @version 3.0 (Abr 2021)
+ */
 public class Operacoes {
 	private Random random = new Random();
 	private ListaDePalavras listaDePalavras = new ListaDePalavras(null);
@@ -26,6 +31,11 @@ public class Operacoes {
 	private ModeloDeListaDePalavras esportes = new ListaDePalavras(listaDePalavras.getNomesEsportes());
 	private ModeloDeListaDePalavras times = new ListaDePalavras(listaDePalavras.getTimesFutebol());
 
+	/**
+	 * Método que recebe uma string com o nome do subtema escolhido por um evento de botão e direciona 
+	 * para outro método escolher uma palavra.
+	 * @param subtema
+	 */
 	public void subtemaEscolhido(String subtema) {
 		if(subtema.equals("Nome feminino")) {
 			escolhePalavra(nomeFeminino);
@@ -55,10 +65,19 @@ public class Operacoes {
 		verificaQtdCharEspeciais(palavraEscolhida);
 	}
 	
+	/**
+	 * Método que recebe um objeto do tipo ModeloDeListaDePalavras e escolhe uma string aleatória do vetor de String, 
+	 * atribuindo à variável palavraEscolhida.
+	 * @param subtema
+	 */
 	public void escolhePalavra(ModeloDeListaDePalavras subtema) {
 		palavraEscolhida = subtema.getPalavraOculta(random.nextInt(subtema.getpalavraOcultaTamanho()));
 	}
 	
+	/**
+	 * Método que oculta a palavraEscolhida para ser mostrada ao usuário, subtituindo as letras por '_' e adicionando 
+	 * um espaço entre os caracteres.
+	 */
 	public void ocultaPalavra() {
 		aux = new char[palavraEscolhida.length()*2];
 		
@@ -75,6 +94,13 @@ public class Operacoes {
 		aux = palavraOculta.toCharArray();
 	}
 
+	/**
+	 * Método que verifica se a letra escolhida pelo usuário, por meio de um evento de botão, está presente na palavra.
+	 * Se a busca for verdadeira, a letra estará presente na palavra, o número de Acertos (numAcertos) aumentará em 1 
+	 * para cada letra encontrada e a palavraOculta será atualizada com o acerto. Se a busca for falsa, a letra não 
+	 * estará presente na palavra e o número de erros aumentarŕa em 1.
+	 * @param letra
+	 */
 	public void verificaChute(char letra) {
 		Boolean busca = false;
 		for(int i = 0, j = 0; i < palavraEscolhida.length(); i++, j+=2) {
@@ -130,6 +156,11 @@ public class Operacoes {
 		palavraOculta = new String(aux);
 	}
 	
+	/**
+	 * Método que verifica quantos caracteres '-' e ' ' estão presentes na palavraEscolhida para saber a quantidade de caracteres 
+	 * alfabéticos a palavra escolhida possui.
+	 * @param palavraEscolhida
+	 */
 	public void verificaQtdCharEspeciais(String palavraEscolhida) {
 		qtdCharEspecias = 0;
 		
@@ -144,6 +175,9 @@ public class Operacoes {
 		qtdLetras = palavraEscolhida.length()-qtdCharEspecias;
 	}
 
+	/**
+	 * Método que apaga a palavraOculta e reinicia o contador de erros e de acertos quando cada partida terminar.
+	 */
 	public void apagaPalavra() {
 		palavraOculta = "";
 		numErros = 0;
@@ -161,7 +195,6 @@ public class Operacoes {
 	public int getNumErros() {
 		return numErros;
 	}
-	
 
 	public int getNumAcertos() {
 		return numAcertos;
@@ -170,5 +203,4 @@ public class Operacoes {
 	public int getQtdLetras() {
 		return qtdLetras;
 	}
-
 }
