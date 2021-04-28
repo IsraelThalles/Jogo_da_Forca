@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"view","l":"Janela"},{"p":"modelo","l":"ListaDePalavras"},{"p":"modelo","l":"ModeloDeListaDePalavras"},{"p":"controle","l":"Operacoes"},{"p":"view","l":"Teclado"},{"p":"view","l":"TelaInicial"},{"p":"view","l":"TelaPrincipal"},{"p":"view","l":"TelaSubtemas"},{"p":"view","l":"TelaTemas"}]
