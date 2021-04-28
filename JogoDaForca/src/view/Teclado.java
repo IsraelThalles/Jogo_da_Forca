@@ -11,6 +11,11 @@ import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 
+/**
+ * Classe que cria o teclado.
+ * @author Israel
+ * @version 1.0 (Abr 2021)
+ */
 public class Teclado {
 	private JButton a = new JButton();
 	private JButton b = new JButton();
@@ -75,6 +80,11 @@ public class Teclado {
 		
 	}
 	
+	/**
+	 * Método que configura as propriedades de cada botão e os adiciona ao teclado.
+	 * @param botao recebe um botão para cada uma das 26 letras do alfabeto.
+	 * @param tecla recebe uma letra para ser colocada no botão.
+	 */
 	public void configuraBotao(JButton botao, String tecla) {
 		botao.setText(tecla);
 		botao.setFont(new Font("Choco cooky", Font.BOLD, 14));
