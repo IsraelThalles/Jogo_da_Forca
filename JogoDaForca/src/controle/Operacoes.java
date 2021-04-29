@@ -34,7 +34,7 @@ public class Operacoes {
 	/**
 	 * Método que recebe uma string com o nome do subtema escolhido por um evento de botão e direciona 
 	 * para outro método escolher uma palavra.
-	 * @param subtema
+	 * @param subtema (String com o nome do subtema escolhido)
 	 */
 	public void subtemaEscolhido(String subtema) {
 		if(subtema.equals("Nome feminino")) {
@@ -68,7 +68,7 @@ public class Operacoes {
 	/**
 	 * Método que recebe um objeto do tipo ModeloDeListaDePalavras e escolhe uma string aleatória do vetor de String, 
 	 * atribuindo à variável palavraEscolhida.
-	 * @param subtema
+	 * @param subtema (Objeto do tipo ModeloDeListaDePalavras)
 	 */
 	public void escolhePalavra(ModeloDeListaDePalavras subtema) {
 		palavraEscolhida = subtema.getPalavraOculta(random.nextInt(subtema.getpalavraOcultaTamanho()));
@@ -202,5 +202,10 @@ public class Operacoes {
 
 	public int getQtdLetras() {
 		return qtdLetras;
+	}
+
+	//Método usado exclusivamente pela classe de teste.
+	public void setPalavraEscolhida(String palavraEscolhida) {
+		this.palavraEscolhida = palavraEscolhida;
 	}
 }
