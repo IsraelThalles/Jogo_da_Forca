@@ -79,7 +79,7 @@ public class TelaSubtemas {
 
 	/**
 	 * Muda o texto do botão a cada vez que escolhe um tema.
-	 * @param botao1 (String com o novo texto do botão.)
+	 * @param botao1 (String com o novo texto do botão)
 	 */
 	public void setBotao1(String botao1) {
 		this.botao1.setText(botao1);
@@ -91,7 +91,7 @@ public class TelaSubtemas {
 
 	/**
 	 * Muda o texto do botão a cada vez que escolhe um tema.
-	 * @param botao2 (String com o novo texto do botão.)
+	 * @param botao2 (String com o novo texto do botão)
 	 */
 	public void setBotao2(String botao2) {
 		this.botao2.setText(botao2);

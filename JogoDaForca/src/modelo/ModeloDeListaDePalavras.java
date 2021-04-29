@@ -18,8 +18,8 @@ public abstract class ModeloDeListaDePalavras {
 
 	/**
 	 * Método que retorna uma palavra aleatória do vetor de String.
-	 * @param numAleatorio (número entre 0 e o tamanho do vetor de Strings -1.)
-	 * @return palavraOculta[numAleatorio] (retorna uma string da posição numAleatorio.)
+	 * @param numAleatorio (número entre 0 e o tamanho do vetor de Strings -1)
+	 * @return palavraOculta[numAleatorio] (retorna uma string da posição numAleatorio)
 	 */
 	public String getPalavraOculta(int numAleatorio) {
 		return palavraOculta[numAleatorio];
@@ -27,7 +27,7 @@ public abstract class ModeloDeListaDePalavras {
 
 	/**
 	 * Método que atribui um vetor de Strings ao vetor palavraOculta.
-	 * @param palavraOculta (vetor de Strings.)
+	 * @param palavraOculta (vetor de Strings)
 	 */
 	public void setPalavraOculta(String[] palavraOculta) {
 		this.palavraOculta = palavraOculta;
@@ -35,7 +35,7 @@ public abstract class ModeloDeListaDePalavras {
 	
 	/**
 	 * Método que retorna o tamanho do vetor de Strings.
-	 * @return palavraOculta.length (tamanho do vetor de Strings.)
+	 * @return palavraOculta.length (tamanho do vetor de Strings)
 	 */
 	public int getpalavraOcultaTamanho() {
 		return palavraOculta.length;
